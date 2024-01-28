@@ -1,0 +1,261 @@
+
+* {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --primary-color: #00292b;
+    --primary-color-dark: #16d9af;
+    --secondary-color: #16d9af;
+    --white: #ffffff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    color: rgb(233, 224, 200);
+}
+
+
+header .logo img{
+    max-width: 60px;
+    margin-top: 1px;
+
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #00292b;
+
+
+}
+
+.card {
+    display: flex;
+    width: 800px;
+    background: linear-gradient(135deg, #00ffc890, rgb(10, 133, 84));
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 100px 1px rgba(0, 255, 200, 0.28) , 0 0 1px 1px yellow;
+    margin-top: 80px;
+
+}
+
+.card .right h1 {
+    color: white;
+    
+}
+
+
+.card .right p  {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+
+.card .right ul  {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+
+
+.right {
+    width: 80%;
+    margin-bottom: 20px;
+    margin-top: -10px;
+
+}
+
+.left {
+    width: 40%;
+
+}
+
+.left img {
+    width: 100%;
+
+}
+
+ul {
+    list-style-image: url(Svg/icon-success.svg);
+    margin-left: -16px;
+
+}
+
+li {
+    margin-bottom: 10px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+}
+
+
+input {
+    padding: 10px 20px;
+    font-family: inherit;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid hsl(231, 7%, 60%);
+
+}
+
+button {
+    font-family: inherit;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    color: #00292b;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(255, 238, 0);
+    transition: all .1s;
+    box-shadow: 0 0 70px 1px #ffee0067;
+    font-weight: bold;
+
+}
+
+
+
+
+button:hover {
+    transition: all .1s;
+    transform: scale(1.05);
+    box-shadow: 0 0 70px 1px #ffee00;
+    letter-spacing: 0.5px;
+
+}
+
+h1 {
+    font-size: 50px;
+    color: hsl(234, 29%, 20%);
+
+}
+
+.hide {
+    display: none;
+
+}
+
+
+.card-2 {
+    background-color: white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 5px;
+
+}
+
+.card-2 h1 {
+    font-size: 40px;
+
+}
+
+.icon-card-2 {
+    width: 50px;
+
+}
+
+.card-2 button {
+    width: 100%;
+  
+}
+
+
+
+.primary__btn {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 0 40px 0px #00ffc890, 0 0 1px 1px white;
+    font-family: inherit;
+    color: white;
+    margin-top: 10px;
+    padding: 15px 20px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s;
+    font-weight: bold;
+    animation: floatanimation 2s infinite;
+
+}
+
+
+@keyframes floatanimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+
+
+.primary__btn:hover{
+    transition: all .1s;
+    transform: scale(1.05);
+    box-shadow: 0 0 70px 1px #00ffc8a3, 0 0 1px 1px white;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .card {
+      flex-direction: column-reverse;
+      width: 95%;
+      padding: 0;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .card h1 {
+      font-size: 30px;
+    }
+    .right {
+      width: 100%;
+      padding: 20px;
+    }
+    .left {
+      width: 100%;
+    }
+    .left img {
+      content: url("./assets/images/illustration-sign-up-mobile.svg");
+    }
+    form {
+      width: 90%;
+    }
+    .card-2 {
+      min-height: 100vh;
+    }
+}

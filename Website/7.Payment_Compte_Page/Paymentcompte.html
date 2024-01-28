@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription | InnovaMed</title>
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="Paymentcompte.css">
+
+</head>
+<body>
+
+
+    <header>
+        <h1 href="#" class="logo"><img src="Image_Payment_Compte/whiteinnovamed_Compte.png"></h1>
+    </header>
+
+<div class="avertissement">LES INSCRIPTIONS NE SONT OUVERTES <span style="color : red">QU'À PARTIR DU 21 JUIN 2024</span>,</div>
+<a href="/Website/5.Candidature_Page/Candidature.html">
+    <div class="avertissement2">N'HÉSITEZ PAS À <span style="color: red">CANDIDATER</span> EN CLIQUANT SUR CE MESSAGE !</div>
+</a>
+
+
+
+
+<div class="container">
+
+    <div class="card-container">
+
+        <div class="front">
+            <div class="title">INNOVAMED CARD</div>
+
+            <div class="image">
+                <img src="Image_Payment_Compte/chip_Compte.png" alt="">
+                <img src="Image_Payment_Compte/whiteinnovamed_Compte.png" alt="">
+                <img src="Image_Payment_Compte/empreinte.png" alt="">
+
+            </div>
+            <div class="card-number-box">- MON PROGRAMME -</div>
+            <div class="flexbox">
+                <div class="box">
+                    <span>UTILISATEUR :</span>
+                    <div class="card-holder-name">MME/MR</div>
+                </div>
+                <div class="box">
+                    <span>CONTACT :</span>
+                    <div class="card-contact-name">E-MAIL/NUMÉRO</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="box">
+                <span>MOT DE PASSE</span>
+                <div class="cvv-box"></div>
+                <img src="Image_Payment_Compte/empreinte.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <form action="">
+        <div class="inputBox">
+            <span>PROGRAMME CHOISI</span>
+            <select name="" id="" class="card-number-input">
+                <option value="PROGRAMME" selected disabled>MON PROGRAMME</option>
+                <option value="PASS AIX-MARSEILLE">PASS AIX-MARSEILLE</option>
+                <option value="TERMINALE SANTÉ AIX-MARSEILLE">TERMINALE SANTÉ AIX-MARSEILLE</option>
+                <option value="SEMESTRE 1 AIX-MARSEILLE">SEMESTRE 1 AIX-MARSEILLE</option>
+                <option value="SEMESTRE 2 AIX-MARSEILLE">SEMESTRE 2 AIX-MARSEILLE</option>
+            </select>
+        </div>
+        <div class="inputBox">
+            <span>UTILISATEUR</span>
+            <input type="text" class="card-holder-input">
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <span>E-MAIL/NUM/INSTA...</span>
+                <input type="text" class="card-contact-input">
+            </div>
+
+            <div class="inputBox">
+                <span>E-MAIL</span>
+                <input type="text" class="card-email-input">
+            </div>
+            <div class="inputBox">
+                <span>NUMÉRO</span>
+                <input type="text" class="card-number-input">
+            </div>
+        </div>
+        <div class="inputBox">
+            <span>MOT DE PASSE</span>
+            <input type="text" class="cvv-input">
+        </div>
+        <div class="inputBox">
+            <span>ADRESSE DE RÉSIDENCE</span>
+            <input type="text" class="card-adress-input">
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <span>CODE POSTAL</span>
+                <input type="text" class="card-codepostal-input">
+            </div>
+            <div class="inputBox">
+                <span>VILLE</span>
+                <input type="text" class="card-ville-input">
+            </div>
+        </div>
+        <input type="submit" value="OBTENIR MA CARTE INNOVAMED" class="submit-btn" formaction="#">
+
+    </form>
+
+</div>
+
+<script>
+
+    document.querySelector('.card-number-input').oninput = () =>{
+        document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+    }
+    
+    document.querySelector('.card-holder-input').oninput = () =>{
+        document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+    }
+    
+    document.querySelector('.card-contact-input').oninput = () =>{
+        document.querySelector('.card-contact-name').innerText = document.querySelector('.card-contact-input').value;
+    }
+    
+    
+    document.querySelector('.cvv-input').onmouseenter = () =>{
+        document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+        document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+    }
+    
+    document.querySelector('.cvv-input').onmouseleave = () =>{
+        document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+        document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+    }
+    
+    document.querySelector('.cvv-input').oninput = () =>{
+        document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+    }
+    
+    </script>
+
+
+</body>
+</html>

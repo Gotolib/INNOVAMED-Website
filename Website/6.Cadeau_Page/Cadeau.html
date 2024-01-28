@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="Cadeau.css" />
+    <title>
+      CADEAU | INNOVAMED
+    </title>
+  </head>
+
+
+<header>
+    <h1 href="#" class="logo"><img src="Image_Cadeau/whiteinnovamed_Cadeau.png"></h1>
+</header>
+
+
+<body>
+  <div class="card">
+    <div class="right">
+      <h1>RÉCUPÈRE TES<span style="color :rgb(255, 238, 0)"> FICHES CADEAUX </span> ! 🤫</h1>
+      <p>RETROUVEZ SANS ATTENDRE :</p>
+      <ul>
+        <li>1 Fiche <span style="color : #ffee00">Anatomie</span></li>
+        <li>1 Fiche <span style="color : rgb(255, 238, 0)">Biochimie</span></li>
+        <li>1 <span style="color : rgb(255, 238, 0)">E-mail par Semaine</span></li>
+      </ul>
+      <div class="action__btns">
+        <label for="email"><span style="color: white; font-size: 15px;">Adresse E-mail</span></label>
+        <form name="submit-to-google-sheet">
+          <input type="email" name="Email" placeholder="InnovaMedConnect@gmail.com" required>
+          <button type="submit">REÇEVOIR MES FICHES CADEAUX !</button>
+        </form>
+        <form action="PASS.html">
+          <input type="submit" class="btn primary__btn" value="PASS À L'ACTION !" formaction="PASS.html">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxbdraGi06LpVSGHzgm4Ticg4CRa7XpMSRz0mURFFirVVtyYh82trGhbpWAFl5LAI4BYw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <script src="Cadeau.js"></script>
+
+
+
+</body>
+</html>
